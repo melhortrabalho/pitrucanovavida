@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    /* Barra de navegação com fundo branco e borda sutil */
+    .navbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    /* Logo centralizada e maior */
+    .navbar-brand {
+      flex: 1;
+      text-align: center;
+    }
+    .navbar-brand img {
+      height: 80px;  /* Aumente o tamanho da logo */
+      width: auto;
+    }
+    /* Centralizar o item de Login */
+    .navbar-nav {
+      flex: 1;
+      justify-content: center;
+    }
+    .navbar-nav .nav-item .nav-link {
+      color: #2980b9;
+      font-weight: bold;
+      padding: 12px 20px;
+    }
+    .navbar-nav .nav-item .nav-link:hover {
+      color: #21618c;
+      background-color: #ecf0f1;
+      border-radius: 25px;
+    }
+    .navbar-toggler-icon {
+      background-color: #2980b9;
+    }
+    .contact-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 50px auto 0;
+    }
+    h2 {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h4 {
+      color: #2980b9;
+      font-weight: bold;
+    }
+    .form-label i {
+      margin-right: 5px;
+      color: #2980b9;
+    }
+    .btn-primary {
+      background-color: #2980b9;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 30px;
+    }
+    .btn-primary:hover {
+      background-color: #21618c;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      height: 0;
+      max-width: 100%;
+      height: 350px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .contact-info {
+      background-color: #ecf0f1;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-info p {
+      font-size: 1.1em;
+    }
+    .contact-info .fas {
+      color: #2980b9;
+      margin-right: 10px;
+    }
+    .form-control, .form-select {
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: #2980b9;
+      box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);
+    }
+    .form-control::placeholder {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img.png" alt="Logo"> <!-- Logo da empresa -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Login</a> <!-- Link para a página de login -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulário de Contato -->
+  <div class="container py-5">
+    <div class="contact-container">
+      <h2>Contatos</h2>
+
+      <!-- Informações de Contato -->
+      <div class="contact-info">
+        <h4>Informações de Contato</h4>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> Urbanização Nova Vida 1, Luanda</p>
+        <p><i class="fas fa-phone"></i> <strong>Telefone:</strong> (+244) 999 090 990</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> pitrucanovavida@gmail.com</p>
+      </div>
+
+      <!-- Formulário de Contato -->
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Envie-nos uma Mensagem</h4>
+          <form>
+            <div class="mb-3">
+              <label for="nome" class="form-label"><i class="fas fa-user"></i> Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensagem" class="form-label"><i class="fas fa-comment"></i> Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-primary px-4"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h4>Nosso Local</h4>
+          <div class="map-container mt-4">
+            <!-- Substitua a URL do iframe abaixo pela sua localização no Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.691420105338!2d13.234878!3d-8.908252899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f5e13c006519%3A0x6b163ec1c3728382!2scol%C3%A9gio%20pitruca!5e0!3m2!1spt-PT!2sao!4v1746647474493!5m2!1spt-PT!2sao" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
